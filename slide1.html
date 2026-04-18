@@ -3,19 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Slide 1 — Creator Studio</title>
+  <title>Slide 1 — Design System Foundations — Creator Studio</title>
+  <meta name="description" content="Slide 1: Core design tokens, color palette, and motion principles used across Creator Studio." />
+  <meta name="theme-color" content="#0f1724" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
   <link rel="stylesheet" href="style.css">
-  <style>
-    .slide-hero{padding:60px 28px;display:flex;gap:24px;align-items:center;justify-content:center}
-    .slide-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:14px;max-width:980px;display:flex;gap:18px;align-items:center}
-    .slide-media{width:44%;min-height:220px;border-radius:10px;background:linear-gradient(90deg,#071022,#0b1220);display:flex;align-items:center;justify-content:center;color:var(--muted)}
-    .slide-body{width:56%}
-    .slide-body h2{margin:0 0 8px}
-    .slide-body p{color:var(--muted);line-height:1.6}
-    .slide-controls{display:flex;gap:10px;margin-top:14px}
-    .small-btn{padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);color:var(--muted);cursor:pointer;transition:transform .12s}
-    .small-btn:hover{transform:translateY(-3px);color:#fff}
-  </style>
 </head>
 <body>
   <header class="site-header">
@@ -27,8 +19,6 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="chatbot.html">Chatbot</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="terms.html">Terms</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
       </ul>
     </nav>
   </header>
@@ -47,14 +37,14 @@
         <p>Slide 1 introduces the core design tokens, color palette, and motion principles used across the site. These foundations ensure consistent hover states, transitions, and accessible contrast for all components.</p>
 
         <div class="slide-controls">
-          <a class="small-btn" href="slide2.html">Next Slide</a>
-          <a class="small-btn" href="projects.html">Back to Projects</a>
+          <a class="small-btn" href="projects.html">← Back to Projects</a>
+          <a class="small-btn" href="slide2.html">Next Slide →</a>
         </div>
       </div>
     </div>
 
     <div id="ads-slot" class="ads-slot" style="max-width:320px;margin-left:18px">
-      <!-- Paste AdSense script here -->
+      <!-- Ad slot -->
     </div>
   </main>
 
@@ -64,6 +54,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
