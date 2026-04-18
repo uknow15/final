@@ -4,6 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Projects — Creator Studio</title>
+  <meta name="description" content="Selected work and demo pages built with animated templates and chatbot integration by Creator Studio." />
+  <meta name="theme-color" content="#0f1724" />
+  <meta property="og:title" content="Projects — Creator Studio" />
+  <meta property="og:description" content="Explore our project demos, marketing microsites, and documentation portals." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,11 +19,9 @@
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a class="active" href="projects.html">Projects</a></li>
+        <li><a href="projects.html">Projects</a></li>
         <li><a href="chatbot.html">Chatbot</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="terms.html">Terms</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
       </ul>
     </nav>
   </header>
@@ -28,27 +32,31 @@
       <p class="subtitle">Selected work and demo pages built with the same template and chatbot integration.</p>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:22px">
-        <article style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;">
+        <article class="reveal" style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;">
           <h3 style="margin:0 0 8px">Project Alpha</h3>
           <p style="color:var(--muted);line-height:1.5">A marketing microsite with animated hero, responsive grid, and integrated knowledge chatbot.</p>
           <a class="cta" href="chatbot.html" style="margin-top:12px;display:inline-block">Open Chatbot</a>
         </article>
 
-        <article style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;">
+        <article class="reveal" style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;">
           <h3 style="margin:0 0 8px">Docs Portal</h3>
           <p style="color:var(--muted);line-height:1.5">Documentation site with RAG search for quick answers and source citations linking back to pages.</p>
           <a class="cta" href="chatbot.html" style="margin-top:12px;display:inline-block">Try Search</a>
         </article>
 
-        <article style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;">
+        <article class="reveal" style="background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;">
           <h3 style="margin:0 0 8px">Landing Template</h3>
           <p style="color:var(--muted);line-height:1.5">A landing page template with AdSense slot and contact form wired to SMTP for real leads.</p>
           <a class="cta" href="contact.html" style="margin-top:12px;display:inline-block">Contact</a>
         </article>
       </div>
 
+      <div style="margin-top:22px;text-align:center">
+        <a class="small-btn" href="slide1.html" style="display:inline-block">View Design Slides →</a>
+      </div>
+
       <div id="ads-slot" class="ads-slot" style="margin-top:22px">
-        <!-- Paste AdSense script here -->
+        <!-- Ad slot -->
       </div>
     </section>
   </main>
@@ -59,6 +67,7 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
+
