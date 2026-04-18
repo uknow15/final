@@ -5,7 +5,9 @@
 }
 *{box-sizing:border-box}
 body{margin:0;background:linear-gradient(180deg,#071022 0%, #0f1724 100%);color:#e6eef6;min-height:100vh}
-.site-header{backdrop-filter: blur(6px);position:sticky;top:0;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
+
+/* ── Header & Nav ── */
+.site-header{backdrop-filter: blur(6px);position:sticky;top:0;z-index:100;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.03)}
 .nav{display:flex;align-items:center;justify-content:space-between;padding:18px 28px}
 .logo{font-weight:700;color:var(--accent);text-decoration:none;font-size:1.1rem}
 .nav-links{list-style:none;display:flex;gap:14px;margin:0;padding:0}
@@ -13,6 +15,7 @@ body{margin:0;background:linear-gradient(180deg,#071022 0%, #0f1724 100%);color:
 .nav-links a:hover{color:#fff;transform:translateY(-3px);box-shadow:0 6px 18px rgba(0,0,0,0.4)}
 .nav-links a.active{color:#fff;background:linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01))}
 
+/* ── Hero (about, projects, etc.) ── */
 .hero{padding:80px 28px;display:flex;flex-direction:column;align-items:center;gap:24px}
 .hero-inner{max-width:900px;text-align:center}
 .title{font-size:2.6rem;margin:0 0 12px;letter-spacing:-0.02em}
@@ -20,12 +23,20 @@ body{margin:0;background:linear-gradient(180deg,#071022 0%, #0f1724 100%);color:
 .cta{display:inline-block;background:linear-gradient(90deg,var(--accent),#ff8a8a);color:#071022;padding:12px 20px;border-radius:999px;text-decoration:none;font-weight:600;transition:transform .18s ease}
 .cta:hover{transform:translateY(-4px)}
 
+/* ── Ad slots ── */
 .ads-slot{margin-top:18px;min-height:90px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--glass);border:1px dashed rgba(255,255,255,0.02)}
 
+/* ── Footer ── */
 .site-footer{padding:18px 28px;border-top:1px solid rgba(255,255,255,0.02);text-align:center;color:var(--muted)}
+.site-footer a{color:var(--muted);text-decoration:none;transition:color .2s}
+.site-footer a:hover{color:#fff}
 
+/* ── Chatbot ── */
 .chat-main{display:flex;gap:20px;padding:28px}
 .chat-panel{flex:1;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;min-height:420px;display:flex;flex-direction:column}
+.chat-aside{width:280px;display:flex;flex-direction:column;gap:14px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+.chat-aside h3{margin:0 0 8px;color:#fff}
+.chat-aside ul{margin:0;padding-left:18px;color:var(--muted);line-height:1.6}
 .messages{flex:1;overflow:auto;padding:8px;display:flex;flex-direction:column;gap:12px}
 .message{padding:12px;border-radius:10px;max-width:78%;line-height:1.4}
 .message.user{align-self:flex-end;background:#0b1220;color:#e6eef6;box-shadow:0 6px 18px rgba(0,0,0,0.4)}
@@ -37,45 +48,47 @@ body{margin:0;background:linear-gradient(180deg,#071022 0%, #0f1724 100%);color:
 .chat-controls button:hover{transform:translateY(-3px)}
 
 .sources{margin-top:12px;color:var(--muted);font-size:0.9rem}
+.sources a{color:var(--accent);text-decoration:none;transition:color .2s}
+.sources a:hover{color:#ff8a8a}
 
-/* subtle floating animation for hero */
+/* ── Subtle floating animation — scoped to .hero only ── */
 @keyframes floaty {0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
-.hero-inner{animation:floaty 6s ease-in-out infinite}
+.hero .hero-inner{animation:floaty 6s ease-in-out infinite}
 
-/* responsive */
+/* ── Responsive ── */
 @media (max-width:900px){
   .chat-main{flex-direction:column}
+  .chat-aside{width:100%}
   .nav-links{display:none}
 }
-/* nav toggle */
+
+/* ── Nav toggle (mobile) ── */
 .nav-toggle{display:none;border:0;background:transparent;cursor:pointer;padding:8px}
 .nav-toggle .bar{display:block;width:22px;height:2px;background:var(--muted);margin:4px 0;border-radius:2px;transition:transform .18s,opacity .18s}
 @media (max-width:900px){
   .nav-toggle{display:block}
-  .nav-links{position:fixed;right:0;top:0;height:100vh;width:260px;background:linear-gradient(180deg, rgba(11,18,32,0.98), rgba(7,16,34,0.98));backdrop-filter:blur(6px);transform:translateX(100%);transition:transform .28s;padding:60px 18px;display:flex;flex-direction:column;gap:12px}
+  .nav-links{position:fixed;right:0;top:0;height:100vh;width:260px;background:linear-gradient(180deg, rgba(11,18,32,0.98), rgba(7,16,34,0.98));backdrop-filter:blur(6px);transform:translateX(100%);transition:transform .28s;padding:60px 18px;display:flex;flex-direction:column;gap:12px;z-index:200}
   .nav-links.open{transform:translateX(0)}
   .nav-links a{padding:12px;border-radius:8px}
 }
 
-/* reveal animation */
+/* ── Reveal animation ── */
 .reveal{opacity:0;transform:translateY(10px) scale(0.995);transition:opacity .6s ease,transform .6s ease}
 .reveal.revealed{opacity:1;transform:none}
 
-/* toast */
+/* ── Toast ── */
 #site-toast{transition:opacity .28s ease;opacity:0}
 
-/* source highlight */
+/* ── Source highlight ── */
 .source-highlight{outline:2px solid rgba(255,107,107,0.18);box-shadow:0 8px 24px rgba(255,107,107,0.06);transition:box-shadow .2s,outline .2s}
 
-
-/* Contact page specific styles */
+/* ── Contact page ── */
 .contact-wrapper{display:grid;grid-template-columns:1fr 360px;gap:28px;max-width:1100px;margin:0 auto}
 .contact-left{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:12px}
 .contact-right{display:flex;flex-direction:column;gap:18px;align-items:stretch}
 .contact-title{font-size:1.6rem;margin:0 0 6px}
 .contact-sub{color:var(--muted);margin:0 0 18px}
 
-/* Form card */
 .contact-form-card{display:flex;flex-direction:column;gap:12px}
 .field{display:flex;flex-direction:column;gap:8px}
 .field-label{font-size:0.85rem;color:var(--muted);font-weight:600}
@@ -99,7 +112,6 @@ body{margin:0;background:linear-gradient(180deg,#071022 0%, #0f1724 100%);color:
   transform:translateY(-2px);
 }
 
-/* Gradient send button */
 .btn-gradient{
   background:linear-gradient(90deg,#ff6b9a,#ff4fa3);
   color:#071022;
@@ -113,21 +125,69 @@ body{margin:0;background:linear-gradient(180deg,#071022 0%, #0f1724 100%);color:
 }
 .btn-gradient:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(255,107,107,0.12)}
 
-/* Status text */
 .contact-status{margin-left:12px;color:var(--muted);font-size:0.95rem;align-self:center}
 
-/* Booking card */
 .booking-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
 .booking-title{margin:0 0 6px}
 .booking-email a{color:#ff9bb3;text-decoration:none;font-weight:700}
 .booking-note{color:var(--muted);font-size:0.95rem;margin-top:8px}
 
-/* Ads card */
 .ads-card .ads-slot{min-height:140px;border-radius:12px;background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:center;border:1px dashed rgba(255,255,255,0.02)}
 
-/* Responsive */
 @media (max-width:980px){
   .contact-wrapper{grid-template-columns:1fr; padding:18px}
   .contact-right{order:2}
   .contact-left{order:1}
+}
+
+/* ── Slide pages ── */
+.slide-hero{padding:60px 28px;display:flex;gap:24px;align-items:center;justify-content:center}
+.slide-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:14px;max-width:980px;display:flex;gap:18px;align-items:center}
+.slide-media{width:44%;min-height:220px;border-radius:10px;background:linear-gradient(90deg,#071022,#0b1220);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+.slide-body{width:56%}
+.slide-body h2{margin:0 0 8px}
+.slide-body p{color:var(--muted);line-height:1.6}
+.slide-controls{display:flex;gap:10px;margin-top:14px}
+.small-btn{padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.04);color:var(--muted);cursor:pointer;text-decoration:none;font-weight:600;transition:transform .12s, color .2s}
+.small-btn:hover{transform:translateY(-3px);color:#fff}
+
+/* ── Back-to-top button ── */
+#back-to-top{
+  position:fixed;
+  bottom:28px;
+  right:28px;
+  width:44px;
+  height:44px;
+  border-radius:50%;
+  border:none;
+  background:linear-gradient(135deg, var(--accent), #ff8a8a);
+  color:#071022;
+  font-size:1.2rem;
+  font-weight:700;
+  cursor:pointer;
+  opacity:0;
+  transform:translateY(12px);
+  transition:opacity .3s ease, transform .3s ease;
+  z-index:90;
+  box-shadow:0 8px 24px rgba(255,107,107,0.15);
+  pointer-events:none;
+}
+#back-to-top.visible{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+#back-to-top:hover{
+  transform:translateY(-4px);
+  box-shadow:0 14px 32px rgba(255,107,107,0.25);
+}
+
+/* ── Reduced motion preference ── */
+@media (prefers-reduced-motion: reduce){
+  *, *::before, *::after{
+    animation-duration:0.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:0.01ms !important;
+    scroll-behavior:auto !important;
+  }
 }
