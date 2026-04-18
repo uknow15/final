@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+venv/
+.venv/
+
+# Environment
+.env
+
+# FAISS index (generated — re-run ingest.py to rebuild)
+faiss_index.bin
+metadata.jsonl
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node (if applicable)
+node_modules/
+package-lock.json
+
+# Logs
+*.log
