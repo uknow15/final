@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Slide 2 — Creator Studio</title>
+  <title>Slide 2 — Motion &amp; Accessibility — Creator Studio</title>
+  <meta name="description" content="Slide 2: Motion language, microinteractions, accessibility notes, chatbot integration, and ad slot placement." />
+  <meta name="theme-color" content="#0f1724" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
   <link rel="stylesheet" href="style.css">
   <style>
     .grid-slides{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:40px 28px;max-width:1100px;margin:0 auto}
@@ -11,6 +14,7 @@
     .panel h3{margin-top:0}
     .panel p{color:var(--muted);line-height:1.5}
     .panel .meta{font-size:13px;color:var(--muted);margin-top:12px}
+    @media (max-width:700px){.grid-slides{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -23,8 +27,6 @@
         <li><a href="projects.html">Projects</a></li>
         <li><a href="chatbot.html">Chatbot</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="terms.html">Terms</a></li>
-        <li><a href="privacy.html">Privacy</a></li>
       </ul>
     </nav>
   </header>
@@ -56,8 +58,13 @@
       </div>
     </section>
 
+    <div style="max-width:1100px;margin:0 auto;padding:0 28px 18px;display:flex;gap:10px">
+      <a class="small-btn" href="slide1.html">← Previous Slide</a>
+      <a class="small-btn" href="slide3.html">Next Slide →</a>
+    </div>
+
     <div id="ads-slot" class="ads-slot" style="max-width:980px;margin:18px auto">
-      <!-- Paste AdSense script here -->
+      <!-- Ad slot -->
     </div>
   </main>
 
@@ -67,6 +74,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
