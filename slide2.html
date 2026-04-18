@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Slide 2 — Creator Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .grid-slides{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:40px 28px;max-width:1100px;margin:0 auto}
+    .panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+    .panel h3{margin-top:0}
+    .panel p{color:var(--muted);line-height:1.5}
+    .panel .meta{font-size:13px;color:var(--muted);margin-top:12px}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">Creator Studio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="grid-slides">
+      <div class="panel reveal">
+        <h3>Motion and Microinteractions</h3>
+        <p>Slide 2 covers the motion language: easing curves, durations, and microinteractions for buttons, nav, and cards. Use subtle transforms and shadow changes to convey depth without overwhelming the user.</p>
+        <div class="meta">Duration: 180–300ms; Easing: cubic‑bezier(0.2,0.9,0.2,1)</div>
+      </div>
+
+      <div class="panel reveal">
+        <h3>Accessibility Notes</h3>
+        <p>Ensure focus outlines are visible for keyboard users, provide sufficient color contrast, and avoid motion that can trigger vestibular issues. Offer reduced‑motion preferences where appropriate.</p>
+        <div class="meta">WCAG: AA contrast; reduced‑motion support recommended</div>
+      </div>
+
+      <div class="panel reveal">
+        <h3>Chatbot Integration</h3>
+        <p>RAG chatbot uses embeddings + FAISS to retrieve relevant passages from site pages. Keep page content clear and sectioned to improve retrieval quality and answer precision.</p>
+        <div class="meta">Index after publishing pages; tune chunk size and k for best results</div>
+      </div>
+
+      <div class="panel reveal">
+        <h3>Ad Slot Placement</h3>
+        <p>Place AdSense slots in non-intrusive areas such as sidebars or between content blocks. Use lazy loading to defer ad scripts until the slot is visible.</p>
+        <div class="meta">Use data-ads-html for lazy injection via main.js</div>
+      </div>
+    </section>
+
+    <div id="ads-slot" class="ads-slot" style="max-width:980px;margin:18px auto">
+      <!-- Paste AdSense script here -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Creator Studio. All rights reserved. <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Creator Studio — Chatbot</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">Creator Studio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a class="active" href="chatbot.html">Chatbot</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="chat-main">
+    <section class="chat-panel">
+      <div id="messages" class="messages" aria-live="polite"></div>
+
+      <div class="chat-controls">
+        <input id="q" type="text" placeholder="Ask about this site..." autocomplete="off" />
+        <button id="send">Send</button>
+      </div>
+
+      <div id="sources" class="sources"></div>
+    </section>
+
+    <aside class="chat-aside">
+      <h3>Tips</h3>
+      <ul>
+        <li>Ask about pages, projects, or site features.</li>
+        <li>Answers are sourced from the site content.</li>
+      </ul>
+
+      <div id="ads-slot" class="ads-slot">
+        <!-- Paste AdSense script here -->
+      </div>
+    </aside>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Creator Studio. All rights reserved. <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script src="chatbot.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

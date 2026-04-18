@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Slide 3 — Creator Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .feature-list{padding:40px 28px;max-width:1000px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
+    .feature{display:flex;gap:14px;align-items:flex-start;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:14px;border-radius:12px}
+    .feature .num{width:48px;height:48px;border-radius:10px;background:rgba(255,107,107,0.12);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)}
+    .feature .content h4{margin:0 0 6px}
+    .feature .content p{color:var(--muted);margin:0}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">Creator Studio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="feature-list">
+      <div class="feature reveal">
+        <div class="num">1</div>
+        <div class="content">
+          <h4>Consistent Components</h4>
+          <p>Reusable components reduce design debt and make it easier to keep the chatbot context aligned with page structure.</p>
+        </div>
+      </div>
+
+      <div class="feature reveal">
+        <div class="num">2</div>
+        <div class="content">
+          <h4>Content Structure</h4>
+          <p>Use clear headings and short paragraphs so the ingest script can chunk and index content effectively for retrieval.</p>
+        </div>
+      </div>
+
+      <div class="feature reveal">
+        <div class="num">3</div>
+        <div class="content">
+          <h4>Testing & Monitoring</h4>
+          <p>Log queries and review top retrieved passages to refine chunking, prompts, and the system message for better answers.</p>
+        </div>
+      </div>
+
+      <div style="margin-top:12px">
+        <a class="cta" href="chatbot.html">Open Chatbot</a>
+        <a class="small-btn" href="slide1.html" style="margin-left:10px">Previous Slide</a>
+      </div>
+    </section>
+
+    <div id="ads-slot" class="ads-slot" style="max-width:980px;margin:18px auto">
+      <!-- Paste AdSense script here -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Creator Studio. All rights reserved. <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

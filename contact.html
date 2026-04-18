@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Creator Studio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">Creator Studio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="contact-main" style="padding:40px 28px;">
+    <section class="contact-wrapper reveal">
+      <!-- Left: Contact form -->
+      <div class="contact-left">
+        <h2 class="contact-title">Get in touch</h2>
+        <p class="contact-sub">Tell us about your project and we’ll get back within 24 hours.</p>
+
+        <form id="contact-form" class="contact-form-card" autocomplete="off" novalidate>
+          <label class="field">
+            <span class="field-label">Your name</span>
+            <input name="name" id="name" type="text" required />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Email</span>
+            <input name="email" id="email" type="email" required />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Service</span>
+            <select name="service" id="service" aria-label="Service">
+              <option>Video Production</option>
+              <option>Web Design</option>
+              <option>Chatbot Integration</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Tell me about your project</span>
+            <textarea name="message" id="message" rows="6" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button id="send-btn" type="submit" class="btn-gradient">Send Message</button>
+            <div id="contact-status" class="contact-status" role="status" aria-live="polite"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right: Booking card + Ad slot -->
+      <aside class="contact-right">
+        <div class="booking-card reveal">
+          <h3 class="booking-title">Booking</h3>
+          <p class="booking-email"><a href="mailto:nova.lane@example.com">nova.lane@example.com</a></p>
+          <p class="booking-note">Prefer to book a call? Send a short brief and preferred times.</p>
+        </div>
+
+        <div class="ads-card">
+          <div id="ads-slot" class="ads-slot" data-ads-html="">
+            <!-- AD SLOT contact — paste ad code here -->
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Creator Studio. All rights reserved. <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="contact.js"></script>
+</body>
+</html>

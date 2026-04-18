@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Slide 1 — Creator Studio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .slide-hero{padding:60px 28px;display:flex;gap:24px;align-items:center;justify-content:center}
+    .slide-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:14px;max-width:980px;display:flex;gap:18px;align-items:center}
+    .slide-media{width:44%;min-height:220px;border-radius:10px;background:linear-gradient(90deg,#071022,#0b1220);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    .slide-body{width:56%}
+    .slide-body h2{margin:0 0 8px}
+    .slide-body p{color:var(--muted);line-height:1.6}
+    .slide-controls{display:flex;gap:10px;margin-top:14px}
+    .small-btn{padding:8px 12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02);color:var(--muted);cursor:pointer;transition:transform .12s}
+    .small-btn:hover{transform:translateY(-3px);color:#fff}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="index.html">Creator Studio</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="slide-hero">
+    <div class="slide-card reveal">
+      <div class="slide-media">
+        <div>
+          <strong style="display:block;margin-bottom:8px">Slide 1 Visual</strong>
+          <span style="font-size:13px;color:var(--muted)">Hero illustration placeholder</span>
+        </div>
+      </div>
+
+      <div class="slide-body">
+        <h2>Design System Foundations</h2>
+        <p>Slide 1 introduces the core design tokens, color palette, and motion principles used across the site. These foundations ensure consistent hover states, transitions, and accessible contrast for all components.</p>
+
+        <div class="slide-controls">
+          <a class="small-btn" href="slide2.html">Next Slide</a>
+          <a class="small-btn" href="projects.html">Back to Projects</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="ads-slot" class="ads-slot" style="max-width:320px;margin-left:18px">
+      <!-- Paste AdSense script here -->
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>© 2026 Creator Studio. All rights reserved. <a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
