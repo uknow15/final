@@ -3,7 +3,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Creator Studio — Chatbot</title>
+  <title>Chatbot — Creator Studio</title>
+  <meta name="description" content="Ask questions about Creator Studio using our AI-powered chatbot. Answers sourced from site content with citations." />
+  <meta name="theme-color" content="#0f1724" />
+  <meta property="og:title" content="Chatbot — Creator Studio" />
+  <meta property="og:description" content="AI-powered chatbot that answers questions using site content." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,7 +20,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a class="active" href="chatbot.html">Chatbot</a></li>
+        <li><a href="chatbot.html">Chatbot</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -25,7 +31,7 @@
       <div id="messages" class="messages" aria-live="polite"></div>
 
       <div class="chat-controls">
-        <input id="q" type="text" placeholder="Ask about this site..." autocomplete="off" />
+        <input id="q" type="text" placeholder="Ask about this site…" autocomplete="off" />
         <button id="send">Send</button>
       </div>
 
@@ -37,10 +43,11 @@
       <ul>
         <li>Ask about pages, projects, or site features.</li>
         <li>Answers are sourced from the site content.</li>
+        <li>Sources are linked so you can verify.</li>
       </ul>
 
       <div id="ads-slot" class="ads-slot">
-        <!-- Paste AdSense script here -->
+        <!-- Ad slot -->
       </div>
     </aside>
   </main>
@@ -51,7 +58,7 @@
     </div>
   </footer>
 
-  <script src="chatbot.js"></script>
-  <script src="main.js"></script>
+  <script src="chatbot.js" defer></script>
+  <script src="main.js" defer></script>
 </body>
 </html>
